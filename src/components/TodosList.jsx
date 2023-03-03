@@ -1,7 +1,9 @@
 import React from 'react';
 import TodoItem from './TodoItem';
 
-function TodosList({ todosProps, handleChange, delTodo, setUpdate }) {
+function TodosList({
+  todosProps, handleChange, delTodo, setUpdate,
+}) {
   return (
     <div>
       <ul>
