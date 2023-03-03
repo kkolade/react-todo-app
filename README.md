@@ -24,9 +24,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Math Magician React App <a name="about-project"></a>
+# 📖 React Todo App <a name="about-project"></a>
 
-**The Math Magician React App** is a...
+**The React Todo App** is a practice project at Microverse to learn React.js front-end library
 
 ## 🛠 Built With <a name="built-with"></a>
 
