@@ -1,3 +1,6 @@
+/* eslint-disable function-paren-newline */
+/* eslint-disable implicit-arrow-linebreak */
+/* eslint-disable no-param-reassign */
 import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import InputTodo from './InputTodo';
@@ -23,21 +26,21 @@ const TodosLogic = () => {
   ]);
 
   const handleChange = (id) => {
-    setTodos((prevState) => prevState.map((todo) => {
-      if (todo.id === id) {
-        return {
-          ...todo,
-          completed: !todo.completed,
-        };
-      }
-      return todo;
-    }));
+    setTodos((prevState) =>
+      prevState.map((todo) => {
+        if (todo.id === id) {
+          return {
+            ...todo,
+            completed: !todo.completed,
+          };
+        }
+        return todo;
+      })
+    );
   };
 
   const delTodo = (id) => {
-    setTodos([
-      ...todos.filter((todo) => todo.id !== id),
-    ]);
+    setTodos([...todos.filter((todo) => todo.id !== id)]);
   };
 
   const addTodoItem = (title) => {
@@ -56,7 +59,7 @@ const TodosLogic = () => {
           todo.title = updatedTitle;
         }
         return todo;
-      }),
+      })
     );
   };
 

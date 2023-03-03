@@ -1,9 +1,7 @@
 import { useState } from 'react';
 import styles from '../styles/TodoItem.module.css';
 
-const TodoItem = ({
-  itemProps, handleChange, delTodo, setUpdate,
-}) => {
+const TodoItem = ({ itemProps, handleChange, delTodo, setUpdate }) => {
   const [editing, setEditing] = useState(false);
 
   const handleEditing = () => {
@@ -42,8 +40,12 @@ const TodoItem = ({
         <span style={itemProps.completed ? completedStyle : null}>
           {itemProps.title}
         </span>
-        {/* <button onClick={handleEditing}>Edit</button> */}
-        <button onClick={() => delTodo(itemProps.id)}>Delete</button>
+        <button type="submit" onClick={handleEditing}>
+          Edit
+        </button>
+        <button type="submit" onClick={() => delTodo(itemProps.id)}>
+          Delete
+        </button>
       </div>
       <input
         type="text"
